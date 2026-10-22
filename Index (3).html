@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rawat Tunas: permainan 1.000 hari pertama | Tumbuh Raga, Tumbuh Jiwa</title>
+<style>
+:root{--bg:#FDF8F0;--ink:#1F2D27;--muted:#5A6760;--g:#2E7D5B;--gd:#1E4D3A;--ob:#E08A2E;--o:#B8660F;--soft:#E4F0E9;--card:#FFFFFF;--warn:#FFF0D6;--line:#D9E3DC;--on-g:#FFFFFF;--bad:#FBE3DC;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13201A;--ink:#EDF3EF;--muted:#A8B6AF;--g:#5DBB8E;--gd:#8FD6B2;--ob:#F0A14D;--o:#F0A14D;--soft:#203A2E;--card:#1B2A23;--warn:#3A2E17;--line:#2D4237;--on-g:#10261C;--bad:#3E2620}}
+:root[data-theme="dark"]{--bg:#13201A;--ink:#EDF3EF;--muted:#A8B6AF;--g:#5DBB8E;--gd:#8FD6B2;--ob:#F0A14D;--o:#F0A14D;--soft:#203A2E;--card:#1B2A23;--warn:#3A2E17;--line:#2D4237;--on-g:#10261C;--bad:#3E2620}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5em;color:var(--gd)}
+h1{font-size:clamp(2.1rem,8vw,3.2rem)}h2{font-size:1.45rem}
+p{margin:0 0 1em}
+.wrap{max-width:640px;margin:0 auto;padding:24px 20px 48px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--ob);outline-offset:2px}
+.btn{background:var(--g);color:var(--on-g);border:0;border-radius:999px;padding:12px 26px;font-weight:700}
+.btn.ghost{background:none;border:1.5px solid var(--g);color:var(--gd)}
+.hud{display:grid;grid-template-columns:130px 1fr;gap:16px;align-items:center;margin-bottom:20px}
+.hud svg{width:130px;height:130px}
+.leaf{transform-origin:100px 118px;transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+.meters{display:grid;gap:10px}
+.m label{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600}
+.m .tr{height:12px;border-radius:99px;background:var(--line);overflow:hidden}
+.m .fl{height:100%;width:0;border-radius:99px;transition:width .6s}
+.fl.r{background:var(--g)}.fl.j{background:var(--ob)}
+.stage{display:flex;gap:6px;margin-bottom:6px}
+.stage i{flex:1;height:6px;border-radius:9px;background:var(--line)}
+.stage i.d{background:var(--g)}.stage i.c{background:var(--ob)}
+.where{font-size:.9rem;color:var(--muted);margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.opts{display:grid;gap:10px;margin:16px 0}
+.opt{text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px}
+.opt:hover:not(:disabled){border-color:var(--g)}
+.opt:disabled{cursor:default}
+.opt.ok{border-color:var(--g);background:var(--soft)}
+.opt.no{border-color:var(--ob);background:var(--bad)}
+.fb{border-left:5px solid var(--g);background:var(--soft);padding:14px 16px;border-radius:0 10px 10px 0;margin-bottom:16px}
+.fb.no{border-color:var(--ob);background:var(--warn)}
+.fb b{display:block}
+.ref{font-size:.8em;color:var(--g);font-weight:600}
+.hint{color:var(--muted);font-size:.9rem}
+.big{font-family:Georgia,serif;font-size:2.6rem;color:var(--gd);line-height:1}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+.badges span{background:var(--soft);border-radius:99px;padding:6px 14px;font-size:.9rem;font-weight:600}
+.hide{display:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section id="start">
+<svg width="84" height="84" viewBox="0 0 96 96" role="img" aria-label="Logo tunas"><circle cx="48" cy="48" r="46" fill="#2E7D5B"/><path d="M48 80V58" stroke="#FDF8F0" stroke-width="4" stroke-linecap="round"/><path d="M48 60C33 61 22 49 23 34c15 0 25 10 25 26Z" fill="#FDF8F0"/><path d="M48 60c15 1 26-11 25-26-15 0-25 10-25 26Z" fill="#E08A2E"/><circle cx="48" cy="36" r="7" fill="#F6C177"/></svg>
+<h1 style="margin-top:16px">Rawat Tunas</h1>
+<p>Kamu mendampingi sebuah keluarga melewati 1.000 hari pertama kehidupan, dari kehamilan sampai anak sekitar 2 tahun. Ada sepuluh pilihan. Setiap pilihan yang tepat menumbuhkan daun hijau (raga) atau daun oranye (jiwa).</p>
+<p class="hint">Tidak ada kalah di sini. Jawaban yang kurang tepat akan dijelaskan, lalu kamu lanjut. Isi permainan mengikuti buku saku “Tumbuh Raga, Tumbuh Jiwa” dan tidak menggantikan pemeriksaan tenaga kesehatan.</p>
+<button class="btn" id="go">Mulai bermain</button>
+</section>
+
+<section id="play" class="hide">
+<div class="hud">
+<svg viewBox="0 0 200 200" role="img" aria-label="Tunas yang tumbuh sesuai skor">
+<ellipse cx="100" cy="182" rx="62" ry="9" fill="var(--line)"/>
+<path d="M100 180V118" stroke="var(--g)" stroke-width="7" stroke-linecap="round"/>
+<g class="leaf" id="lr" style="transform:scale(.2)"><path d="M100 120C68 122 44 98 46 66c32 0 54 22 54 54Z" fill="var(--g)"/></g>
+<g class="leaf" id="lj" style="transform:scale(.2)"><path d="M100 120c32 2 56-22 54-54-32 0-54 22-54 54Z" fill="var(--ob)"/></g>
+<circle id="ch" cx="100" cy="92" r="14" fill="#F6C177" style="transform-origin:100px 92px;transform:scale(.4);transition:transform .7s"/>
+</svg>
+<div class="meters">
+<div class="m"><label><span>Raga</span><span id="tr">0</span></label><div class="tr"><div class="fl r" id="fr"></div></div></div>
+<div class="m"><label><span>Jiwa</span><span id="tj">0</span></label><div class="tr"><div class="fl j" id="fj"></div></div></div>
+</div>
+</div>
+<div class="stage" id="bar" aria-hidden="true"></div>
+<div class="where" id="where"></div>
+<div class="card">
+<h2 id="q"></h2>
+<div class="opts" id="opts"></div>
+<div id="fb" aria-live="polite"></div>
+<button class="btn hide" id="next">Lanjut</button>
+</div>
+</section>
+
+<section id="end" class="hide">
+<p class="hint">Hasil akhir</p>
+<div class="big" id="pct"></div>
+<h2 id="title" style="margin-top:10px"></h2>
+<div class="badges" id="badges"></div>
+<p id="msg"></p>
+<div class="fb"><b>Ingat</b>Permainan ini hanya latihan. Untuk tumbuh kembang anak yang nyata, ukur panjang atau tinggi badan secara rutin dan hubungi posyandu, puskesmas, atau tenaga kesehatan terdekat bila ragu.</div>
+<button class="btn" id="again">Main lagi</button>
+</section>
+
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const Q=[
+{s:0,t:"Hamil",c:"r",q:"Kehamilan Bu Rina baru berjalan beberapa minggu. Apa langkah terbaik?",o:["Menunggu sampai ada keluhan baru ke tenaga kesehatan","Periksa kehamilan rutin dan bersalin dengan tenaga kesehatan","Cukup tanya pengalaman tetangga"],a:1,f:"Pemeriksaan kehamilan rutin dan persalinan dengan tenaga kesehatan ikut berperan dalam pencegahan stunting.",r:"[2]"},
+{s:0,t:"Hamil",c:"r",q:"Bu Rina sering merasa lelah dan lemas. Tetangga menawarkan suplemen yang ia pakai. Sebaiknya?",o:["Konsultasikan menu dan suplemen ke bidan, dokter, atau ahli gizi","Langsung minum suplemen yang sama","Dibiarkan saja, nanti juga hilang"],a:0,f:"Anemia dan kurang gizi pada ibu hamil perlu dicegah, dan menu serta suplemen sebaiknya dikonsultasikan ke tenaga kesehatan.",r:"[3]"},
+{s:0,t:"Hamil",c:"j",q:"Bu Rina sulit tidur, mudah menangis, dan tidak bersemangat. Apa yang membantu?",o:["Dipendam sendiri supaya tidak merepotkan","Dianggap sepele saja","Menceritakannya ke pasangan, keluarga, kader, atau bidan"],a:2,f:"Kenali tanda lelah berat dan ceritakan. Jika berlangsung lama, cari bantuan profesional (psikolog, dokter, puskesmas). Merawat diri sendiri bukan sikap egois.",r:"[9]"},
+{s:1,t:"0–6 bulan",c:"r",q:"Bayi Rina berusia 2 bulan. Apa yang sebaiknya diberikan?",o:["ASI eksklusif","Tambahan makanan lain agar cepat gemuk","Apa saja yang disarankan tetangga"],a:0,f:"Pada 0–6 bulan, fokusnya ASI eksklusif. ASI eksklusif dan praktik pemberian makan berkaitan dengan risiko stunting.",r:"[3]"},
+{s:1,t:"0–6 bulan",c:"j",q:"Bayi mengoceh dan kadang menangis. Bagaimana menanggapinya?",o:["Tanggapi dengan hangat, ajak bicara dan bernyanyi","Dibiarkan sampai berhenti sendiri","Cukup diberi mainan tanpa ditemani"],a:0,f:"Menanggapi ocehan dan tangisan anak dengan hangat adalah stimulasi sederhana. Pengasuhan yang responsif berkontribusi pada pencegahan stunting. (Contoh kegiatan ini saran praktis umum.)",r:"[8]"},
+{s:2,t:"6–24 bulan",c:"r",q:"Anak Rina berusia 10 bulan. Menu mana yang paling baik?",o:["Satu jenis makanan yang sama setiap hari","Beragam: protein hewani atau nabati, sayur, dan buah","Hanya camilan agar anak tenang"],a:1,f:"Pada 6–24 bulan, pemberian makan yang tepat penting. Variasi makanan adalah saran umum, dan menu serta suplemen dikonsultasikan ke bidan, dokter, atau ahli gizi.",r:"[3]"},
+{s:2,t:"6–24 bulan",c:"r",q:"Anak Rina tampak jauh lebih pendek dari sebayanya. Keluarga bilang pendek itu biasa. Apa langkahmu?",o:["Menimbang berat badan di rumah saja","Bawa ke posyandu atau puskesmas untuk diukur panjang atau tinggi badannya","Menunggu sampai anak lebih besar"],a:1,f:"Stunting sering tidak disadari dan sulit dikenali dengan mata. Ukur panjang atau tinggi badan secara rutin, bukan hanya berat badan.",r:"[1]"},
+{s:2,t:"Mitos atau fakta",c:"j",q:"“Kalau anak stunting, pasti itu salah ibu.”",o:["Fakta","Mitos"],a:1,f:"Mitos. Ekonomi, sanitasi, dan layanan kesehatan ikut menentukan. Ibu bukan satu-satunya yang bertanggung jawab.",r:"[2][4]"},
+{s:2,t:"Mitos atau fakta",c:"r",q:"“Stunting hanya disebabkan anak kurang makan.”",o:["Fakta","Mitos"],a:1,f:"Mitos. Stunting muncul dari gabungan faktor rumah tangga, lingkungan, ekonomi, dan budaya, termasuk sanitasi dan layanan kesehatan.",r:"[1][4]"},
+{s:2,t:"Mitos atau fakta",c:"r",q:"“Mencegah stunting butuh kerja sama keluarga, masyarakat, dan layanan kesehatan.”",o:["Fakta","Mitos"],a:0,f:"Fakta. Tinjauan sistematis di Indonesia menekankan strategi lintas sektor dan berbasis komunitas.",r:"[4]"}
+];
+const stNames=["Hamil","0–6 bulan","6–24 bulan"];
+const max={r:Q.filter(x=>x.c=="r").length,j:Q.filter(x=>x.c=="j").length};
+let i,sc;
+function show(id){["start","play","end"].forEach(x=>$("#"+x).classList.toggle("hide",x!=id))}
+function hud(){
+ const t=(sc.r+sc.j)/Q.length;
+ $("#lr").style.transform="scale("+(.2+.8*sc.r/max.r)+")";
+ $("#lj").style.transform="scale("+(.2+.8*sc.j/max.j)+")";
+ $("#ch").style.transform="scale("+(.4+.6*t)+")";
+ $("#fr").style.width=100*sc.r/max.r+"%";$("#fj").style.width=100*sc.j/max.j+"%";
+ $("#tr").textContent=sc.r+" / "+max.r;$("#tj").textContent=sc.j+" / "+max.j;
+}
+function render(){
+ const x=Q[i];
+ $("#bar").innerHTML=Q.map((_,k)=>'<i class="'+(k<i?"d":k==i?"c":"")+'"></i>').join("");
+ $("#where").textContent="Tahap: "+stNames[x.s]+" · Pilihan "+(i+1)+" dari "+Q.length;
+ $("#q").textContent=x.q;$("#fb").innerHTML="";$("#next").classList.add("hide");
+ $("#opts").innerHTML="";
+ x.o.forEach((t,k)=>{const b=document.createElement("button");b.className="opt";b.textContent=t;b.onclick=()=>answer(k);$("#opts").append(b)});
+ $("#opts").firstChild.focus({preventScroll:true});
+}
+function answer(k){
+ const x=Q[i],ok=k==x.a;
+ [...$("#opts").children].forEach((b,n)=>{b.disabled=true;if(n==x.a)b.classList.add("ok");else if(n==k)b.classList.add("no")});
+ if(ok)sc[x.c]++;
+ $("#fb").innerHTML='<div class="fb'+(ok?"":" no")+'"><b>'+(ok?"Tepat!":"Belum tepat.")+"</b>"+x.f+' <span class="ref">'+x.r+"</span></div>";
+ hud();
+ const n=$("#next");n.textContent=i==Q.length-1?"Lihat hasil":"Lanjut";n.classList.remove("hide");n.focus({preventScroll:true});
+}
+function finish(){
+ const tot=sc.r+sc.j,p=Math.round(100*tot/Q.length);
+ $("#pct").textContent=p+"%";
+ $("#title").textContent=p>=90?"Tunasmu tumbuh subur":p>=60?"Tunasmu tumbuh baik":"Tunasmu mulai tumbuh";
+ const b=[];if(sc.r==max.r)b.push("Penjaga raga");if(sc.j==max.j)b.push("Penjaga jiwa");if(p==100)b.push("Pelurus mitos");if(!b.length)b.push("Siap belajar lagi");
+ $("#badges").innerHTML=b.map(t=>"<span>"+t+"</span>").join("");
+ $("#msg").textContent=p==100?"Semua pilihanmu tepat. Raga dan jiwa tumbuh bersama, dan kamu paham bahwa mencegah stunting adalah kerja bersama.":"Kamu menjawab "+tot+" dari "+Q.length+" dengan tepat (raga "+sc.r+"/"+max.r+", jiwa "+sc.j+"/"+max.j+"). Baca lagi penjelasan di tiap pilihan, lalu coba main sekali lagi.";
+ show("end");
+}
+function start(){i=0;sc={r:0,j:0};hud();show("play");render()}
+$("#go").onclick=start;$("#again").onclick=start;
+$("#next").onclick=()=>{if(i==Q.length-1)finish();else{i++;render()}};
+</script>
+</body>
+</html>
